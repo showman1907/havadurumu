@@ -65,7 +65,6 @@
             display: none;
         }
 
-        /* Rüzgar Animasyonu */
         .wind .cloud {
             width: 60px;
             height: 20px;
@@ -85,7 +84,6 @@
             100% { left: 250px; }
         }
 
-        /* Yağmur Animasyonu */
         .rain .drop {
             width: 2px;
             height: 20px;
@@ -99,7 +97,6 @@
             100% { transform: translateY(350px); opacity: 0; }
         }
 
-        /* Güneş Animasyonu */
         .sun {
             background: radial-gradient(circle, #ffd700 20%, #2d2d44 70%);
         }
@@ -118,7 +115,6 @@
             100% { transform: scale(1); }
         }
 
-        /* Kar Animasyonu */
         .snow .flake {
             width: 8px;
             height: 8px;
@@ -267,9 +263,9 @@
                 return;
             }
 
-            const encodedCity = encodeURIComponent(city); // Türkçe karakterler için kodlama
+            const encodedCity = encodeURIComponent(city);
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${apiKey}&units=metric&lang=tr`;
-            console.log("API isteği yapılıyor:", url);
+            console.log("API isteği:", url);
 
             try {
                 const response = await fetch(url);
